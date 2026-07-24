@@ -54,9 +54,30 @@ body {
   -webkit-mask-composite: xor;
   mask-composite: exclude;
   opacity: 0;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.28s cubic-bezier(.2,.9,.2,1);
 }
 
 .gradient-border-hover:hover::before {
   opacity: 1;
+  transform: scale(1.01);
 }
+
+/* Decorative blob animations (subtle float) */
+.blob {
+  transform-origin: center;
+  transition: transform 6s ease-in-out;
+}
+
+/* Slight continuous breathing effect */
+@keyframes floatSlow {
+  0% { transform: translateY(0) scale(1); }
+  50% { transform: translateY(-8px) scale(1.02); }
+  100% { transform: translateY(0) scale(1); }
+}
+
+.blob-1 { animation: floatSlow 12s ease-in-out infinite; transform-origin: center; }
+.blob-2 { animation: floatSlow 10s ease-in-out infinite; transform-origin: center; }
+.blob-3 { animation: floatSlow 14s ease-in-out infinite; transform-origin: center; }
+
+/* ensure decorative SVG doesn't interfere with layout */
+.pointer-events-none { pointer-events: none; }

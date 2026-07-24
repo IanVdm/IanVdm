@@ -98,6 +98,58 @@ export default function Home() {
       </div>
 
       <section id="top" className="relative isolate overflow-hidden pt-24">
+        {/* Decorative SVG blobs behind the hero */}
+        <div className="absolute inset-0 -z-10 overflow-hidden pointer-events-none">
+          <svg className="w-full h-full" viewBox="0 0 1400 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg" aria-hidden>
+            <defs>
+              <linearGradient id="g1" x1="0%" x2="100%" y1="0%" y2="100%">
+                <stop offset="0%" stopColor="#22d3ee" />
+                <stop offset="60%" stopColor="#60a5fa" />
+                <stop offset="100%" stopColor="#8b5cf6" />
+              </linearGradient>
+              <linearGradient id="g2" x1="0%" x2="100%" y1="100%" y2="0%">
+                <stop offset="0%" stopColor="#7c3aed" />
+                <stop offset="50%" stopColor="#06b6d4" />
+                <stop offset="100%" stopColor="#f472b6" />
+              </linearGradient>
+              <linearGradient id="g3" x1="0%" x2="100%" y1="0%" y2="0%">
+                <stop offset="0%" stopColor="#a78bfa" />
+                <stop offset="50%" stopColor="#06b6d4" />
+                <stop offset="100%" stopColor="#f472b6" />
+              </linearGradient>
+
+              {/* filter to softly blur / smooth blob edges to avoid hard artifacts */}
+              <filter id="soften" x="-30%" y="-30%" width="160%" height="160%" filterUnits="objectBoundingBox">
+                <feMorphology operator="dilate" radius="1" in="SourceGraphic" result="morph" />
+                <feGaussianBlur in="morph" stdDeviation="6" result="blur" />
+                <feComposite in="SourceGraphic" in2="blur" operator="over" />
+              </filter>
+            </defs>
+
+            <g transform="translate(60,30)">
+              {/* larger, more prominent front blob (moved left and scaled) */}
+              <path className="blob blob-1" filter="url(#soften)" transform="translate(-80,-40) scale(1.18)" fill="url(#g1)" opacity="0.26" d="M280 30c90-40 220-10 300 40s100 160 50 260-190 140-270 110-170-110-230-200S200 100 280 30z" />
+
+              {/* secondary blob on the right (smaller, pushed further right) */}
+              <path className="blob blob-2" transform="translate(160,60) scale(0.78)" fill="url(#g2)" opacity="0.12" d="M980 340c70-70 190-100 270-60s140 150 110 250-160 180-270 190-220-20-280-120-30-170 160-250z" />
+
+              {/* new accent blob slightly behind and shifted left */}
+              <path className="blob blob-3" transform="translate(-40,20) scale(1.02)" fill="url(#g3)" opacity="0.14" d="M600 120c120-30 260 10 340 80s40 220-70 300-260 80-360 10-160-190-90-300 110-120 180-170z" />
+            </g>
+
+            {/* faint floating dots */}
+            <g className="dots" fill="#ffffff" opacity="0.04">
+              <circle cx="260" cy="120" r="3.8" />
+              <circle cx="520" cy="80" r="4.2" />
+              <circle cx="820" cy="70" r="3.2" />
+              <circle cx="1120" cy="260" r="3.6" />
+              <circle cx="920" cy="460" r="3.4" />
+              <circle cx="620" cy="620" r="4.0" />
+              <circle cx="360" cy="440" r="3.0" />
+            </g>
+          </svg>
+        </div>
+
         <div className="mx-auto max-w-7xl px-6 py-24 sm:py-32">
           <div className="rounded-[2rem] border border-white/[0.08] bg-white/[0.03] p-10 shadow-[0_0_80px_rgba(6,182,212,0.12)] backdrop-blur-xl md:p-14">
             <p className="gradient-text text-[0.8rem] font-semibold uppercase tracking-[0.35em] sm:text-[0.9rem]">
