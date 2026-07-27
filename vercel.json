@@ -1,6 +1,0 @@
-{
-  "version": 2,
-  "installCommand": "cd IanVdm && npm install",
-  "buildCommand": "cd IanVdm && npm run build",
-  "outputDirectory": "IanVdm/.next"
-}
