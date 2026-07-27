@@ -23,6 +23,11 @@ const currentFocus = [
     description:
       'I’m practicing modern development workflows with Next.js, TypeScript, and cloud-friendly deployment patterns.',
   },
+  {
+    title: 'Exploring the world of Systems',
+    description:
+      'I’m exploring the in’s and out’s of the world of systems such as Active Directory, DNS, network infrastructure, servers and many more to come.',
+  },
 ];
 
 const featuredProjects = [
@@ -30,19 +35,19 @@ const featuredProjects = [
     name: 'Portfolio Site',
     description: 'A polished single-page experience built with Next.js, Tailwind CSS, and a dark, modern visual style.',
     tags: ['Next.js', 'Tailwind', 'TypeScript'],
-    link: '#contact',
+    link: 'This current site.',
   },
   {
-    name: 'Automation Toolkit',
-    description: 'A practical concept focused on improving developer workflows with scripts, consistency, and cleaner delivery.',
-    tags: ['Python', 'Automation', 'CI/CD'],
-    link: '#contact',
+    name: 'Planetoria',
+    description: 'An IOS application I developed for my Minor Showcase project. It introduced me to the world of IOS development and SwiftUI, and I learned a lot about the process of building an app from scratch.',
+    tags: ['IOS', 'SwiftUI', 'Swift'],
+    link: 'https://github.com/IanVdm/Planetoria',
   },
   {
-    name: 'Product Focused UI',
-    description: 'A design-minded approach to creating intuitive interfaces that feel polished and easy to navigate.',
-    tags: ['React', 'UI', 'Accessibility'],
-    link: '#contact',
+    name: 'Home Lab',
+    description: 'I am currently in the process of building a home lab to explore the world of systems and networking. I am learning about Active Directory, DNS, network infrastructure, servers, best practice secuirity concepts and many more to come.',
+    tags: ['Systems', 'Networking', 'Windows Server', 'Linux Server', 'Active Directory', 'DHCP & DNS', 'Security'],
+    link: 'Comming Soon...',
   },
 ];
 
@@ -60,18 +65,18 @@ const stackItems = [
 const contactLinks = [
   {
     label: 'Email',
-    value: 'hello@example.com',
-    href: 'mailto:hello@example.com',
+    value: 'ianvdm2001@gmail.com',
+    href: 'mailto:ianvdm2001@gmail.com',
   },
   {
     label: 'LinkedIn',
-    value: 'linkedin.com/in/yourname',
-    href: 'https://www.linkedin.com/',
+    value: 'Ian van der Merwe',
+    href: 'https://www.linkedin.com/in/ian-van-der-merwe-834887225/',
   },
   {
     label: 'GitHub',
-    value: 'github.com/yourhandle',
-    href: 'https://github.com/',
+    value: 'IanVdm',
+    href: 'https://github.com/IanVdm',
   },
 ];
 
@@ -297,7 +302,7 @@ export default function Home() {
 
       <footer className="bg-[#09090b] px-6 py-10 text-zinc-500">
         <div className="mx-auto flex max-w-7xl flex-col gap-4 text-center text-sm sm:flex-row sm:items-center sm:justify-between">
-          <p>© {new Date().getFullYear()} Ian van der Merwe. Crafted for a modern, dark portfolio experience.</p>
+          <p>© {new Date().getFullYear()} Ian van der Merwe.</p>
           <p className="text-zinc-400">Built with Next.js, Tailwind CSS and TypeScript.</p>
         </div>
       </footer>
