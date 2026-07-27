@@ -179,6 +179,14 @@ export default function Home() {
               >
                 Let&apos;s connect
               </a>
+              <a
+                href="/CV_Software_Engineer_Ian_van_der_Merwe.pdf"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center rounded-full border border-cyan-500/20 bg-cyan-500/10 px-7 py-3 text-sm font-semibold text-cyan-300 transition hover:border-cyan-500/40 hover:bg-cyan-500/20 hover:text-cyan-100"
+              >
+                View CV
+              </a>
             </div>
             <p className="mt-10 text-sm uppercase tracking-[0.3em] text-zinc-500">Scroll to explore</p>
           </div>
