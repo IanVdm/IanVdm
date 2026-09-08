@@ -9,7 +9,8 @@ Over time, I developed a strong interest in the systems and infrastructure behin
 I am currently building a HomeLab to gain hands‑on experience with Linux, Windows Server, networking, virtualization, automation, monitoring, and security. My goal is to combine my development background with strong operational knowledge, allowing me to build better systems end‑to‑end.
 
 # 📌 Projects
-Coming Soon...
+
+- Windows Server Home Lab
 
 # 🎓 Background
 
